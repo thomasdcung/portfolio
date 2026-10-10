@@ -8,19 +8,30 @@
 </head>
 <body>
     <h1>Contact</h1>
-    <form action="mailto:tdcung@ucsd.edu" method="POST" enctype="text/plain">
-        <label>Email: <input type="email" name="email"></label>
-        <label>Subject: <input name="subject"></label>
-        <label>Message: <textarea name="body"></textarea></label>
-        <button>Submit</button>
+    <p>Linkedin: <a href="https://www.linkedin.com/in/thomascung" target="_blank">Thomas Cung</a></p>
+    <form id="contact-form" action="mailto:tdcung@ucsd.edu" method="POST" enctype="text/plain">
+        <label>Email: <input type="email" id="email" name="email" required></label>
+        <label>Subject: <input id="subject" name="subject" required></label>
+        <label>Message: <textarea id="body" name="body" required></textarea></label>
+        <button type="submit">Submit</button>
     </form>
     <nav>
         <ul>
             <li><a href="../index.html">Home</a></li>
+            <li><a href="../resume/index.html">Resume</a></li>
             <li><a href="../projects/index.html">Projects</a></li>
             <li><a href="../contact/index.html">Contact</a></li>
             <li><a href="https://github.com/thomasdcung" target="_blank">GitHub</a></li>
         </ul>
     </nav>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var body = document.getElementById('body').value;
+            var mailtoUrl = 'mailto:tdcung@ucsd.edu?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent('From: ' + email + '\n\n' + body);
+            window.location.href = mailtoUrl;
+        });
+    </script>
 </body>
 </html>
