@@ -5,33 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="../style.css">
+    <script type="module" src="../global.js"></script>
 </head>
 <body>
     <h1>Contact</h1>
     <p>Linkedin: <a href="https://www.linkedin.com/in/thomascung" target="_blank">Thomas Cung</a></p>
-    <form id="contact-form" action="mailto:tdcung@ucsd.edu" method="POST" enctype="text/plain">
-        <label><span>Email:</span> <input type="email" id="email" name="email" required></label>
+    <form action="mailto:tdcung@ucsd.edu">
         <label><span>Subject:</span> <input id="subject" name="subject" required></label>
         <label><span>Message:</span> <textarea id="body" name="body" required></textarea></label>
         <button type="submit">Submit</button>
     </form>
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../resume/index.html">Resume</a></li>
-            <li><a href="../projects/index.html">Projects</a></li>
-            <li><a href="../contact/index.html" class="current">Contact</a></li>
-            <li><a href="https://github.com/thomasdcung" target="_blank">GitHub</a></li>
-        </ul>
-    </nav>
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            var email = document.getElementById('email').value;
-            var subject = document.getElementById('subject').value;
-            var body = document.getElementById('body').value;
-            var mailtoUrl = 'mailto:tdcung@ucsd.edu?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent('From: ' + email + '\n\n' + body);
-            window.location.href = mailtoUrl;
-        });
-    </script>
 </body>
 </html>

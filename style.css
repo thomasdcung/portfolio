@@ -1,8 +1,10 @@
 :root {
   --color-accent: oklch(65% 50% 0);
+  --border-color: oklch(50% 10% 200 / 40%);
 }
 
 html {
+  color-scheme: light dark;
   accent-color: var(--color-accent);
 }
 
@@ -31,9 +33,10 @@ nav li {
 
 /* Step 2.2 & 2.3: Navigation Layout and Styling */
 nav {
+  --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
   margin-bottom: 2em;
-  border-bottom: 1px solid oklch(80% 3% 200);
+  border-bottom: 1px solid var(--border-color);
 }
 
 nav a {
@@ -46,7 +49,7 @@ nav a {
 
 /* Step 2.3: Current Page Link */
 nav a.current {
-  border-bottom: 0.4em solid oklch(80% 3% 200);
+  border-bottom: 0.4em solid var(--border-color);
   padding-bottom: 0.1em;
 }
 
@@ -54,7 +57,7 @@ nav a.current {
 nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
   padding-bottom: 0.1em;
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 /* Step 3.1 & 3.3: Contact Form Typography & Grid Layout */
@@ -73,8 +76,16 @@ form label {
 
 input,
 textarea,
-button {
+button,
+select {
   font: inherit;
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
 }
 
 form button {
@@ -113,7 +124,7 @@ form button {
 }
 
 #resume h3 {
-  border-bottom: 2px solid oklch(80% 3% 200);
+  border-bottom: 2px solid var(--border-color);
   padding-bottom: 0.2em;
   margin-top: 1.5em;
 }
@@ -138,7 +149,7 @@ form button {
   color: inherit;
   font-weight: 500;
   padding: 0.5em 1em;
-  border: 1px solid oklch(80% 3% 200);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   transition: all 0.2s ease-in-out;
 }
@@ -146,7 +157,7 @@ form button {
 .social-links a:hover {
   border-color: var(--color-accent);
   color: var(--color-accent);
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
   transform: translateY(-2px);
 }
 
