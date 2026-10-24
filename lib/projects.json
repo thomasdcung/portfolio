@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Vigilens",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Architected a multi-agent AI system analyzing live video feeds to detect kitchen safety violations and workflow inefficiencies, delivering real-time actionable insights via a React dashboard. Built backend pipeline integrating TwelveLabs video understanding, custom Health/Efficiency agents, and an interactive Google Docs policy training module."
+  },
+  {
+    "title": "Predicting League of Legends Game Winners",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Engineered scikit-learn preprocessing pipelines over 150,348 observations of professional LoL esports data, isolating features at the 15-minute mark to prevent data leakage. Tuned a Random Forest model using GridSearchCV and 5-fold cross-validation, achieving 74.7% test accuracy."
+  },
+  {
+    "title": "Shopper Intention Prediction",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Analyzed 12,330 e-commerce session logs utilizing logistic regression and Welch's t-tests to identify PageValues and BounceRates as critical conversion drivers. Surfaced user intent patterns demonstrating new visitors converted at nearly 2x the rate of returning visitors."
+  },
+  {
+    "title": "Expository Visualization",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Designed an expository visualization focusing on clarity, visual hierarchy, and effectively communicating trends in complex datasets."
+  },
+  {
+    "title": "Persuasive and Deceptive Visualization",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Critiqued and constructed persuasive visualizations exploring how visual framing, axis manipulation, and design choices influence viewer perception."
+  },
+  {
+    "title": "Interactive Visualization with D3",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Developed interactive multi-view charts with brushing and linking to explore multidimensional datasets seamlessly."
+  },
+  {
+    "title": "Roku TV Media Streaming App",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Designed and engineered production-grade Roku TV applications using BrightScript and SceneGraph within an agile engineering team."
+  },
+  {
+    "title": "Technical Documentation Series",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Authored 20+ pages of developer documentation and produced instructional video modules adopted across 3 cohorts to accelerate onboarding."
+  },
+  {
+    "title": "Robotics Assembly & Programming",
+    "year": "2022",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Instructed scouts on hardware assembly, mechanics, and C++ programming using VEX robotics platforms for regional competitions."
+  },
+  {
+    "title": "Geospatial Data Visualizations",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Mapped spatial patterns and geographic distributions using GeoJSON, TopoJSON, and modern map projections."
+  },
+  {
+    "title": "Animated Scrollytelling Presentation",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Built narrative-driven visualizations that animate step-by-step as the user scrolls through analytical findings."
+  },
+  {
+    "title": "Categorical Data Analysis",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Explored visual encodings for hierarchical and categorical data using bar charts, treemaps, and custom color scales."
+  }
+]

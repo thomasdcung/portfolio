@@ -166,3 +166,30 @@ form button {
   height: 1.25em;
   display: block;
 }
+
+/* GitHub Profile Stats */
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5em 1em;
+  text-align: center;
+  padding: 1em;
+  background-color: color-mix(in oklch, var(--color-accent), canvas 95%);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-block: 1.5em;
+}
+
+#profile-stats dt {
+  grid-row: 1;
+  font-size: 0.85em;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+#profile-stats dd {
+  grid-row: 2;
+  margin: 0;
+  font-size: 2em;
+  font-weight: bold;
+}
