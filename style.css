@@ -193,3 +193,79 @@ form button {
   font-size: 2em;
   font-weight: bold;
 }
+
+/* Lab 5: Visualizing categorical data with D3 */
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1em;
+  border: 1px solid var(--border-color);
+  padding: 1em;
+  margin: 1em;
+  flex: 1;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  cursor: pointer;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 50%;
+}
+
+.searchBar {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 2em;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font: inherit;
+}
+
+.project-year {
+  font-family: Baskerville, serif;
+  font-variant-numeric: oldstyle-nums;
+  color: gray;
+  margin-top: 0.5em;
+  display: block;
+}
+
+svg:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+path {
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+  &:is(path) {
+    fill: var(--color);
+  }
+}
+
+.selected:is(path) {
+  fill: var(--color);
+}
