@@ -269,3 +269,120 @@ path {
 .selected:is(path) {
   fill: var(--color);
 }
+
+/* Lab 6: Meta Analysis & Quantitative Scatterplot */
+#chart svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.gridlines line {
+  stroke: var(--border-color);
+  stroke-opacity: 0.3;
+}
+
+.gridlines path {
+  display: none;
+}
+
+/* Tooltip & Description list */
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.3em 1em;
+  margin: 0;
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info dt {
+  color: gray;
+}
+
+dl.info dd {
+  margin: 0;
+}
+
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  padding: 1em;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tooltip {
+    background-color: rgba(30, 30, 30, 0.85);
+    color: white;
+  }
+  dl.info dt {
+    color: #aaa;
+  }
+}
+
+:root[style*="color-scheme: dark"] .tooltip {
+  background-color: rgba(30, 30, 30, 0.85);
+  color: white;
+}
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
+
+/* Marching ants selection rectangle */
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8;
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 0.5s linear infinite;
+}
+
+/* Summary stats & language breakdown description list */
+.stats {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5em 1.5em;
+  padding: 1.5em;
+  background-color: color-mix(in oklch, var(--color-accent), canvas 95%);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-block: 1.5em;
+  align-items: baseline;
+}
+
+.stats dt {
+  grid-column: 1;
+  font-size: 0.9em;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+.stats dd {
+  grid-column: 2;
+  margin: 0;
+  font-size: 1.25em;
+  font-weight: bold;
+}
