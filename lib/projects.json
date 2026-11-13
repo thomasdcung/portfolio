@@ -54,10 +54,11 @@
     "description": "Instructed scouts on hardware assembly, mechanics, and C++ programming using VEX robotics platforms for regional competitions."
   },
   {
-    "title": "Geospatial Data Visualizations",
-    "year": "2025",
+    "title": "Bikewatching — Boston BlueBikes Geospatial Visualization",
+    "year": "2026",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Mapped spatial patterns and geographic distributions using GeoJSON, TopoJSON, and modern map projections."
+    "description": "Built an interactive geospatial map of Boston's BlueBikes system using Mapbox GL JS and D3.js. Visualized 400+ bike stations with area-proportional circles encoding traffic volume, a diverging color scale showing departure vs. arrival flow, and a time-of-day slider for filtering trips. Overlaid bike lane GeoJSON layers for Boston.",
+    "url": "https://thomasdcung.github.io/bikewatching/"
   },
   {
     "title": "Animated Scrollytelling Presentation",

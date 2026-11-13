@@ -119,6 +119,8 @@ function renderTooltipContent(commit) {
 function updateTooltipVisibility(isVisible) {
   const tooltip = document.getElementById('commit-tooltip');
   tooltip.hidden = !isVisible;
+  tooltip.style.opacity = isVisible ? '1' : '0';
+  tooltip.style.visibility = isVisible ? 'visible' : 'hidden';
 }
 
 function updateTooltipPosition(event) {
