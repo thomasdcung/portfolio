@@ -338,7 +338,7 @@ dl.info dd {
 }
 
 circle {
-  transition: all 200ms, r calc(var(--r, 5) * 100ms);
+  transition: all 200ms;
   transform-origin: center;
   transform-box: fill-box;
 
@@ -457,12 +457,10 @@ circle.selected {
 
 #scatter-plot {
   position: sticky;
-  top: 1rem;
+  top: 0;
   left: 0;
   bottom: auto;
-  height: fit-content;
-  max-height: 95vh;
-  align-self: flex-start;
+  height: 50vh;
 }
 
 /* Unit visualization for files */
