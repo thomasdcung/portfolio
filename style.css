@@ -464,6 +464,27 @@ circle.selected {
 }
 
 /* Unit visualization for files */
+.file-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  padding: 0.6em 1em;
+  margin-block: 1em;
+  background-color: color-mix(in oklch, var(--color-accent), canvas 95%);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  list-style: none;
+}
+
+.file-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.85em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
 #files {
   display: grid;
   grid-template-columns: 1.5fr 4fr;
@@ -510,5 +531,10 @@ circle.selected {
   aspect-ratio: 1;
   background: var(--color, steelblue);
   border-radius: 50%;
+  transition: transform 0.1s ease;
+}
+
+.loc:hover {
+  transform: scale(2);
 }
 

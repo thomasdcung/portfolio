@@ -36,6 +36,7 @@ async function loadData() {
   renderCommitInfo(data, commits);
   renderScatterPlot(data, filteredCommits);
   renderScatterStory();
+  renderFileLegend();
   updateFileDisplay(filteredCommits);
   setupSlider();
   setupScrolly();
@@ -324,7 +325,25 @@ function updateFileDisplay(commitsToDisplay) {
     .data((d) => d.lines)
     .join('div')
     .attr('class', 'loc')
-    .attr('style', (d) => `--color: ${colors(d.type)}`);
+    .attr('style', (d) => `--color: ${colors(d.type)}`)
+    .attr('title', (d) => `${d.file} - Line ${d.line} (${d.type})`);
+}
+
+function renderFileLegend() {
+  const legendContainer = d3.select('#file-legend');
+  if (legendContainer.empty()) return;
+  legendContainer.html('');
+
+  const types = Array.from(new Set(data.map((d) => d.type))).filter(Boolean);
+  const ul = legendContainer.append('ul').attr('class', 'file-legend');
+
+  types.forEach((type) => {
+    const li = ul.append('li');
+    li.append('span')
+      .attr('class', 'swatch')
+      .style('--color', colors(type));
+    li.append('span').text(type.toUpperCase());
+  });
 }
 
 function renderScatterStory() {
