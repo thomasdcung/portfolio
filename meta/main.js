@@ -409,22 +409,8 @@ function setupScrolly() {
       const commit = response.element.__data__;
       if (!commit) return;
       const commitDate = commit.datetime;
-      filteredCommits = commits.filter((d) => d.datetime <= commitDate);
-      updateScatterPlot(data, filteredCommits);
-      updateFileDisplay(filteredCommits);
-      renderCommitInfo(data, filteredCommits);
-
-      const slider = document.getElementById('commit-progress');
-      if (slider) {
-        slider.value = timeScale(commitDate);
-        const commitTimeEl = document.querySelector('time#commit-time');
-        if (commitTimeEl) {
-          commitTimeEl.textContent = commitDate.toLocaleString('en', {
-            dateStyle: 'long',
-            timeStyle: 'short',
-          });
-        }
-      }
+      const scrollyCommits = commits.filter((d) => d.datetime <= commitDate);
+      updateScatterPlot(data, scrollyCommits);
     });
 }
 
